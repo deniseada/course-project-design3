@@ -1,0 +1,170 @@
+.constellations-page {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.left-column {
+  width: 25%;
+  background-color: #4a4a4a;
+  padding: 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.intro-heading {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  color: white;
+}
+
+.intro-text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  color: white;
+}
+
+.right-column {
+  width: 75%;
+  background: #0a0a0f;
+  position: relative;
+  overflow: hidden;
+}
+
+.right-column::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(1px 1px at 20% 30%, white, transparent),
+    radial-gradient(1px 1px at 60% 70%, white, transparent),
+    radial-gradient(0.5px 0.5px at 50% 50%, white, transparent),
+    radial-gradient(0.5px 0.5px at 80% 10%, white, transparent),
+    radial-gradient(1px 1px at 90% 60%, white, transparent),
+    radial-gradient(0.5px 0.5px at 33% 80%, white, transparent),
+    radial-gradient(1px 1px at 10% 50%, white, transparent),
+    radial-gradient(0.5px 0.5px at 70% 20%, white, transparent),
+    radial-gradient(1px 1px at 40% 90%, white, transparent),
+    radial-gradient(0.5px 0.5px at 15% 15%, white, transparent),
+    radial-gradient(1px 1px at 85% 85%, white, transparent),
+    radial-gradient(0.5px 0.5px at 25% 40%, white, transparent),
+    radial-gradient(1px 1px at 75% 30%, white, transparent),
+    radial-gradient(0.5px 0.5px at 50% 10%, white, transparent),
+    radial-gradient(1px 1px at 30% 60%, white, transparent),
+    radial-gradient(0.5px 0.5px at 90% 40%, white, transparent);
+  background-repeat: repeat;
+  background-size: 200% 200%;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.constellations-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.constellation-item {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.constellation-svg {
+  width: auto;
+  max-width: 140px;
+  height: auto;
+  filter: brightness(1.2) drop-shadow(0 0 2px rgba(255, 255, 255, 0.3));
+}
+
+.constellation-name {
+  color: white;
+  font-size: 0.85rem;
+  text-align: center;
+  margin: 0.5rem 0 0 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+/* Specific positioning for each constellation - matching image layout */
+/* Top row */
+.constellation-item.ursa-minor {
+  top: 2%;
+  left: 8%;
+}
+
+.constellation-item.ursa-major {
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.constellation-item.cassiopeia {
+  top: 2%;
+  right: 10%;
+}
+
+/* Middle row */
+.constellation-item.pegasus {
+  top: 38%;
+  left: 5%;
+}
+
+.constellation-item.gemini {
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.constellation-item.andromeda {
+  top: 28%;
+  right: 8%;
+}
+
+/* Bottom row */
+.constellation-item.leo {
+  bottom: 32%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.constellation-item.scorpius {
+  bottom: 22%;
+  left: 8%;
+}
+
+.constellation-item.orion {
+  bottom: 16%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.constellation-item.taurus {
+  bottom: 12%;
+  right: 10%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .constellation-svg {
+    max-width: 120px;
+  }
+  
+  .constellation-name {
+    font-size: 0.75rem;
+  }
+}
+
