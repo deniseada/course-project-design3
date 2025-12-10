@@ -1,19 +1,23 @@
+import { useState } from 'react'
 import './Constellations.css'
+import ConstellationDetail from './ConstellationDetail'
 
-const constellations = [
-  { name: 'Ursa Minor', meaning: 'The Little Bear', file: 'ursaMinor.svg', id: 'ursa-minor' },
-  { name: 'Ursa Major', meaning: 'The Great Bear', file: 'UrsaMajor.svg', id: 'ursa-major' },
-  { name: 'Cassiopeia', meaning: 'The Queen', file: 'Cassiopeia.svg', id: 'cassiopeia' },
-  { name: 'Pegasus', meaning: 'The Winged Horse', file: 'Pegasus.svg', id: 'pegasus' },
-  { name: 'Gemini', meaning: 'The Twins', file: 'Gemini.svg', id: 'gemini' },
-  { name: 'Andromeda', meaning: 'The Princess', file: 'Andromeda.svg', id: 'andromeda' },
-  { name: 'Leo', meaning: 'The Lion', file: 'Leo.svg', id: 'leo' },
-  { name: 'Scorpius', meaning: 'The Scorpion', file: 'Scorpius.svg', id: 'scorpius' },
-  { name: 'Orion', meaning: 'The Hunter', file: 'Orion.svg', id: 'orion' },
-  { name: 'Taurus', meaning: 'The Bull', file: 'taurus.svg', id: 'taurus' }
-]
+function Constellations({ onBack }) {
+  const [selectedConstellation, setSelectedConstellation] = useState(null)
 
-function Constellations() {
+  const handleConstellationClick = (constellationId) => {
+    setSelectedConstellation(constellationId)
+  }
+
+  if (selectedConstellation) {
+    return (
+      <ConstellationDetail 
+        constellationId={selectedConstellation}
+        onBack={() => setSelectedConstellation(null)}
+      />
+    )
+  }
+
   return (
     <div className="constellations-page">
       <div className="left-column">
@@ -26,17 +30,111 @@ function Constellations() {
         </p>
       </div>
       <div className="right-column">
+        <div className="shooting-star shooting-star-1"></div>
+        <div className="shooting-star shooting-star-2"></div>
+        <div className="shooting-star shooting-star-3"></div>
+        <div className="shooting-star shooting-star-4"></div>
         <div className="constellations-container">
-          {constellations.map((constellation) => (
-            <div key={constellation.id} className={`constellation-item ${constellation.id}`}>
-              <img 
-                src={`/constellations/${constellation.file}`} 
-                alt={constellation.name}
-                className="constellation-svg"
-              />
-              
-            </div>
-          ))}
+          <div 
+            className="constellation-item ursa-minor"
+            onClick={() => handleConstellationClick('ursa-minor')}
+          >
+            <img 
+              src="/constellations/ursaMinor.svg" 
+              alt="Ursa Minor"
+              className="constellation-svg"
+            />
+          </div>
+          <div 
+            className="constellation-item ursa-major"
+            onClick={() => handleConstellationClick('ursa-major')}
+          >
+            <img 
+              src="/constellations/UrsaMajor.svg" 
+              alt="Ursa Major"
+              className="constellation-svg"
+            />
+          </div>
+          <div 
+            className="constellation-item cassiopeia"
+            onClick={() => handleConstellationClick('cassiopeia')}
+          >
+            <img 
+              src="/constellations/Cassiopeia.svg" 
+              alt="Cassiopeia"
+              className="constellation-svg"
+            />
+          </div>
+          <div 
+            className="constellation-item pegasus"
+            onClick={() => handleConstellationClick('pegasus')}
+          >
+            <img 
+              src="/constellations/Pegasus.svg" 
+              alt="Pegasus"
+              className="constellation-svg"
+            />
+          </div>
+          <div 
+            className="constellation-item gemini"
+            onClick={() => handleConstellationClick('gemini')}
+          >
+            <img 
+              src="/constellations/Gemini.svg" 
+              alt="Gemini"
+              className="constellation-svg"
+            />
+          </div>
+          <div 
+            className="constellation-item andromeda"
+            onClick={() => handleConstellationClick('andromeda')}
+          >
+            <img 
+              src="/constellations/Andromeda.svg" 
+              alt="Andromeda"
+              className="constellation-svg"
+            />
+          </div>
+          <div 
+            className="constellation-item leo"
+            onClick={() => handleConstellationClick('leo')}
+          >
+            <img 
+              src="/constellations/Leo.svg" 
+              alt="Leo"
+              className="constellation-svg"
+            />
+          </div>
+          <div 
+            className="constellation-item scorpius"
+            onClick={() => handleConstellationClick('scorpius')}
+          >
+            <img 
+              src="/constellations/Scorpius.svg" 
+              alt="Scorpius"
+              className="constellation-svg"
+            />
+          </div>
+          <div 
+            className="constellation-item orion"
+            onClick={() => handleConstellationClick('orion')}
+          >
+            <img 
+              src="/constellations/Orion.svg" 
+              alt="Orion"
+              className="constellation-svg"
+            />
+          </div>
+          <div 
+            className="constellation-item taurus"
+            onClick={() => handleConstellationClick('taurus')}
+          >
+            <img 
+              src="/constellations/taurus.svg" 
+              alt="Taurus"
+              className="constellation-svg"
+            />
+          </div>
         </div>
       </div>
     </div>
