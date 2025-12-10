@@ -102,59 +102,58 @@
 /* Specific positioning for each constellation - matching image layout */
 /* Top row */
 .constellation-item.ursa-minor {
-  top: 2%;
-  left: 8%;
+  top: 3%;
+  left: 12%;
 }
 
 .constellation-item.ursa-major {
-  top: 10%;
+  top: 12%;
   left: 50%;
   transform: translateX(-50%);
 }
 
 .constellation-item.cassiopeia {
-  top: 2%;
-  right: 10%;
+  top: 3%;
+  right: 12%;
 }
 
 /* Middle row */
 .constellation-item.pegasus {
-  top: 38%;
-  left: 5%;
+  top: 42%;
+  left: 10%;
 }
 
 .constellation-item.gemini {
-  top: 35%;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 38%;
+  right: 20%;
 }
 
 .constellation-item.andromeda {
-  top: 28%;
-  right: 8%;
+  top: 30%;
+  right: 12%;
 }
 
 /* Bottom row */
 .constellation-item.leo {
-  bottom: 32%;
-  left: 50%;
+  bottom: 35%;
+  left: 45%;
   transform: translateX(-50%);
 }
 
 .constellation-item.scorpius {
-  bottom: 22%;
-  left: 8%;
+  bottom: 25%;
+  left: 12%;
 }
 
 .constellation-item.orion {
-  bottom: 16%;
-  left: 50%;
+  bottom: 18%;
+  left: 45%;
   transform: translateX(-50%);
 }
 
 .constellation-item.taurus {
-  bottom: 12%;
-  right: 10%;
+  bottom: 15%;
+  right: 12%;
 }
 
 /* Responsive adjustments */
