@@ -109,7 +109,7 @@
 }
 
 .cosmic-text {
-  color: #ffa500;
+  color: white;
   font-size: 1.5rem;
   line-height: 1.8;
   text-shadow: 
@@ -143,7 +143,7 @@
 
 .start-button {
   background-color: #d3d3d3;
-  border: 2px solid #808080;
+  border: none !important;
   border-radius: 8px;
   padding: 12px 48px;
   font-size: 1.1rem;
@@ -155,17 +155,26 @@
     0 2px 4px rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease;
   font-family: inherit;
+  outline: none;
 }
 
-.start-button:hover {
+.start-button:hover,
+.start-button:focus,
+.start-button:focus-visible {
   background-color: #e0e0e0;
+  border: none !important;
   box-shadow: 
     inset 0 1px 0 rgba(255, 255, 255, 0.4),
-    0 3px 6px rgba(0, 0, 0, 0.3);
+    0 3px 6px rgba(0, 0, 0, 0.3),
+    0 0 10px rgba(255, 255, 255, 0.8),
+    0 0 20px rgba(255, 255, 255, 0.6),
+    0 0 30px rgba(255, 255, 255, 0.4);
   transform: translateY(-1px);
+  outline: none;
 }
 
 .start-button:active {
+  border: none !important;
   transform: translateY(0);
   box-shadow: 
     inset 0 2px 4px rgba(0, 0, 0, 0.2),

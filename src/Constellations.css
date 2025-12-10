@@ -13,7 +13,7 @@
   flex-direction: column;
   justify-content: center;
   color: white;
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: 'Jura', sans-serif;
 }
 
 .intro-heading {
@@ -230,7 +230,7 @@
   font-size: 0.85rem;
   text-align: center;
   margin: 0.5rem 0 0 0;
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: 'Jura', sans-serif;
   line-height: 1.4;
   white-space: nowrap;
 }
