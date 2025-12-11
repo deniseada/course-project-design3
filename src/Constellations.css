@@ -7,13 +7,20 @@
 
 .left-column {
   width: 25%;
-  background-color: #4a4a4a;
+  background: 
+    radial-gradient(ellipse at 30% 20%, rgba(64, 224, 208, 0.3) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 60%, rgba(0, 191, 255, 0.25) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(0, 128, 128, 0.2) 0%, transparent 60%),
+    radial-gradient(ellipse at 20% 50%, rgba(135, 206, 250, 0.15) 0%, transparent 55%),
+    #0a0a0f;
   padding: 2rem 2.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   color: white;
   font-family: 'Jura', sans-serif;
+  position: relative;
+  overflow: hidden;
 }
 
 .intro-heading {
@@ -262,8 +269,8 @@
 
 .constellation-item.gemini {
   top: 50%;
-  right: 28%;
-  transform: translateY(-50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .constellation-item.andromeda {

@@ -26,7 +26,7 @@ function Constellations({ onBack }) {
           Forged in the heat of ancient stars, we still look upward for guidance, tracing constellations made from the very elements within us.
         </p>
         <p className="intro-text">
-          Explore each star as a story is told behind each with meaning.
+          <strong>Explore</strong> each star as a story is told behind each with meaning.
         </p>
       </div>
       <div className="right-column">

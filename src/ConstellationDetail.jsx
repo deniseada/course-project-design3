@@ -117,40 +117,44 @@ function ConstellationDetail({ constellationId, onBack }) {
             ×
           </button>
         </div>
-        <div className="detail-left">
-          <div 
-            className={`card-container ${isFlipped ? 'flipped' : ''}`}
-            onClick={() => setIsFlipped(!isFlipped)}
-          >
-            <div className="card-front">
-              <img 
-                src="/cards/Card.png" 
-                alt="Card"
-                className="card-image"
-              />
-            </div>
-            <div className="card-back">
-              <img 
-                src={`/cards/${constellation.cardImage}`}
-                alt={`${constellation.name} Card`}
-                className="card-image"
-              />
-            </div>
-          </div>
-        </div>
         <div className="detail-right">
-          <div className="detail-constellation">
-            <img 
-              src={`/cards/${constellation.file}`}
-              alt={constellation.name}
-              className="detail-constellation-svg"
-            />
-          </div>
-          <div className="detail-text">
-            <h1 className="detail-name">{constellation.name}</h1>
-            <p className="detail-meaning">({constellation.meaning})</p>
-            <h2 className="detail-summary-label">Summary</h2>
-            <p className="detail-description">{constellation.description}</p>
+          <div className="detail-main-layout">
+            <div className="detail-card-container">
+              <div 
+                className={`card-container ${isFlipped ? 'flipped' : ''}`}
+                onClick={() => setIsFlipped(!isFlipped)}
+              >
+                <div className="card-front">
+                  <img 
+                    src="/cards/Card.png" 
+                    alt="Card"
+                    className="card-image"
+                  />
+                </div>
+                <div className="card-back">
+                  <img 
+                    src={`/cards/${constellation.cardImage}`}
+                    alt={`${constellation.name} Card`}
+                    className="card-image"
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="detail-content-right">
+              <div className="detail-constellation">
+                <img 
+                  src={`/cards/${constellation.file}`}
+                  alt={constellation.name}
+                  className="detail-constellation-svg"
+                />
+              </div>
+              <div className="detail-text">
+                <h1 className="detail-name">{constellation.name}</h1>
+                <p className="detail-meaning">({constellation.meaning})</p>
+                <h2 className="detail-summary-label">Summary</h2>
+                <p className="detail-description">{constellation.description}</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
